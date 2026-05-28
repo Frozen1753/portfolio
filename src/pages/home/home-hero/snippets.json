@@ -1,0 +1,74 @@
+{
+  "snippets": [
+    {
+      "title": "Dramatic Counter Hook",
+      "language": "typescript",
+      "code": "import { useState, useEffect } from 'react';\n\nexport function useDramaticCounter(): () => void {\n  const [count, setCount] = useState<number>(0);\n\n  useEffect(() => {\n    if (count > 5) {\n      console.warn('TypeScript avait prévenu.');\n    }\n  }, [count]);\n\n  return () => setCount(c => c + 1);\n}"
+    },
+    {
+      "title": "Lazy API",
+      "language": "javascript",
+      "code": "export function getData() {\n  return new Promise((resolve) => {\n    setTimeout(() => {\n      resolve({ ok: true }); // on verra après\n    }, Math.random() * 3000);\n  });\n}"
+    },
+    {
+      "title": "Philosophical PHP",
+      "language": "php",
+      "code": "<?php\nfunction backend($feature) {\n  return $feature ?? \"ça marche en prod, touche pas.\";\n}\n\necho backend(null);"
+    },
+    {
+      "title": "Overconfident Python",
+      "language": "python",
+      "code": "def solve_everything(x):\n    return x * 0  # c'est sûrement bon\n\nprint(\"Résultat:\", solve_everything(999))"
+    },
+    {
+      "title": "Enterprise Java",
+      "language": "java",
+      "code": "public class ServiceFactoryManagerProvider {\n    public String compute() {\n        return \"OK\";\n    }\n}"
+    },
+    {
+      "title": "Pointer Anxiety",
+      "language": "cpp",
+      "code": "int main() {\n    int* ptr;\n    // je vais juste... ne rien faire avec\n    return 0;\n}"
+    },
+    {
+      "title": "Honest C Program",
+      "language": "c",
+      "code": "int main() {\n    // ça compile, c'est déjà bien\n    return 0;\n}"
+    },
+    {
+      "title": "Strict C# Method",
+      "language": "csharp",
+      "code": "public sealed class StatusService {\n    public string GetStatus() => \"Conforme aux standards.\";\n}"
+    },
+    {
+      "title": "Insecure HTML",
+      "language": "html",
+      "code": "<div>\n    <marquee>ça marche, non ?</marquee>\n</div>"
+    },
+    {
+      "title": "Rebellious CSS",
+      "language": "css",
+      "code": ".modal {\n    position: absolute;\n    z-index: 9999;\n}\n\n.tooltip {\n    position: absolute;\n    z-index: 10000; /* moi d'abord */\n}"
+    },
+    {
+      "title": "Judgy SQL",
+      "language": "sql",
+      "code": "SELECT name, productivity\nFROM developers\nWHERE coffee_cups > 3;"
+    },
+    {
+      "title": "Grumpy XML",
+      "language": "xml",
+      "code": "<config>\n  <value>true</value>\n  <!-- obligatoire, sinon ça casse -->\n</config>"
+    },
+    {
+      "title": "Lazy Bash Script",
+      "language": "bash",
+      "code": "#!/bin/bash\necho \"ok\"\nexit 0"
+    },
+    {
+      "title": "Existential JSON",
+      "language": "json",
+      "code": "{\n  \"valid\": true\n}"
+    }
+  ]
+}
