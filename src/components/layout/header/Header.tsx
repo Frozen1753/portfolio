@@ -12,12 +12,10 @@ export function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link to="/" className={styles.logo} onClick={closeMenu}>
-          <span className={styles.bracket}>&lt;</span>
-          Dev
-          <span className={styles.bracket}>/&gt;</span>
+          Prenom NOM
         </Link>
 
-        {/* Nav Desktop */}
+        {/* Nav Desktop */} 
         <nav className={styles.navDesktop}>
           <Link to="/">Accueil</Link>
           <Link to="/projects">Projets</Link>
