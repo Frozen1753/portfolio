@@ -8,9 +8,9 @@ export function Home() {
     <div className={styles.home}>
       <HomeHero />
 
-      <HomeProjects />
-
       <HomeStats />
+
+      <HomeProjects />
     </div>
   );
 }
