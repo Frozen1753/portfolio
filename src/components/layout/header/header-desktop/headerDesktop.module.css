@@ -1,0 +1,30 @@
+.navDesktop {
+  display: flex;
+  gap: var(--spacing-2xl);
+}
+
+.navDesktop a {
+  font-family: var(--font-family-display);
+  font-size: 0.95rem;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.navDesktop a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-accent-primary), var(--color-accent-secondary));
+  transition: width var(--transition-base);
+}
+
+.navDesktop a:hover {
+  color: var(--color-accent-primary);
+}
+
+.navDesktop a:hover::after {
+  width: 100%;
+}

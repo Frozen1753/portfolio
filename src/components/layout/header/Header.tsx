@@ -1,48 +1,41 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import styles from './header.module.css';
+import { Link } from "react-router-dom";
+import { HeaderMobile } from "./header-mobile/HeaderMobile";
+import { HeaderDesktop } from "./header-desktop/HeaderDesktop";
+import { useScreenSize } from "../../../utils/hooks/useScreenSize";
+import styles from "./header.module.css";
+import { useState } from "react";
 
 export function Header() {
+  const { isMobile } = useScreenSize();
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const toggle = () => setIsOpen((prev) => !prev);
+  const close = () => setIsOpen(false);
 
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Link to="/" className={styles.logo} onClick={closeMenu}>
-          Prenom NOM
+        <Link to="/" className={styles.logo}>
+          Eliot NADOUCE
         </Link>
 
-        {/* Nav Desktop */} 
-        <nav className={styles.navDesktop}>
-          <Link to="/">Accueil</Link>
-          <Link to="/projects">Projets</Link>
-        </nav>
-
-        {/* Hamburger Button */}
-        <button
-          className={`${styles.hamburger} ${isOpen ? styles.active : ''}`}
-          onClick={toggleMenu}
-          aria-label="Menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        {isMobile ? (
+          <button
+            className={`${styles.hamburger} ${isOpen ? styles.active : ""}`}
+            onClick={toggle}
+            aria-label="Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        ) : (
+          <HeaderDesktop />
+        )}
       </div>
 
-      {/* Nav Mobile */}
-      {isOpen && (
-        <nav className={styles.navMobile}>
-          <Link to="/" onClick={closeMenu}>
-            Accueil
-          </Link>
-          <Link to="/projects" onClick={closeMenu}>
-            Projets
-          </Link>
-        </nav>
+      {isMobile && (
+        <HeaderMobile isOpen={isOpen} closeMenu={close} />
       )}
     </header>
   );
