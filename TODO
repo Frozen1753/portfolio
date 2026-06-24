@@ -1,16 +1,42 @@
+- [X] Portfolio setup/placeholder
+  - [X] Footer pb
+  - [X] Under Header pb
+  - [X] Lazy + Loader
+  - [X] Layout
+  - [X] NotFound
+  - [X] Data	
+    - [X] ACO
+    - [X] Kuramoto
+    - [X] Prana JDR
+    - [X] Praierie Gourmandes du Morvan
+  - [X] page CV
+    - [X] A propos
+    - [X] Experience
+    - [X] Fromation
+    - [X] Compétences
+    - [X] Interets 
+  - [X] Correction description / Titles
+  - [X] Responsive project Detail
 
-- [ ] Footer pb
-- [ ] Under Header pb
-- [x] Lazy + Loader
-- [X] Layout
-- [ ] Data	
-  - [ ] ACO
-  - [ ] Kuramoto
-  - [ ] Prana JDR
-- [ ] Correction description / Titles
-- [ ] Photo de profile
-- [ ] page CV
-- [ ] replace React Helmet by vite-plugin-ssg (useHead)
-- [ ] MAJ le default-og-image.png
-- [ ] MAJ le sitemap.xml
-- [ ] Favicon
+- [ ] Github Pages
+  - [ ] Photo de profile
+  - [ ] Responsive project Detail
+  - [ ] GitHub Pages 404
+  - [ ] replace React Helmet by vite-plugin-ssg (useHead)
+  - [ ] Favicon
+  - [ ] Update Code jokes
+  - [ ] MAJ le default-og-image.png
+  - [ ] MAJ le sitemap.xml
+  - [ ] LinkedIn
+  - [ ] Nullable "demoUrl" & "repoUrl"
+  - [ ] Nullable screenshots "oops no screenshots"
+  - [ ] Use React Markdown for better project description
+  - [ ] Use tags for project recommandations
+  - [ ] Have "maintenance" status to projects
+  - [ ] Have "colaboration" to projects (ElPotato & Synix)
+
+- [ ] Migrate to Vercel for Backend
+
+- [ ] Vercel
+  - [ ] Markdown -> PDF exporter for CV
+  - [ ] Make content of Projects way more detailed with code blocks and more

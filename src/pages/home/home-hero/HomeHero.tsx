@@ -23,19 +23,21 @@ export function HomeHero() {
       <div className={styles.container}>
         <div className={styles.heroContent}>
           <h1 className={styles.title}>
-            Développeur Full-Stack<span className={styles.highlight}>.</span>
+            Développeur Full-Stack & Architecte Logiciel<span className={styles.highlight}>.</span>
           </h1>
           <p className={styles.subtitle}>
-            Je crée des expériences numériques modernes et performantes. Spécialisé en React,
-            TypeScript et architecture cloud.
+            J’aime construire des projets complets : applications web, API,
+            algorithmes, simulations et outils interactifs. Mon objectif n’est pas
+            seulement de faire fonctionner un logiciel, mais de comprendre comment
+            le concevoir proprement, le faire évoluer et l’optimiser.
           </p>
           <div className={styles.ctas}>
             <Link to="/projects" className={styles.ctaPrimary}>
               Voir mes projets →
             </Link>
-            <a href="mailto:hello@example.com" className={styles.ctaSecondary}>
-              Me contacter
-            </a>
+            <Link to="/cv" className={styles.ctaSecondary}>
+              Mon parcours
+            </Link>
           </div>
         </div>
 

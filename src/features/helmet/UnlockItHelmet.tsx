@@ -11,7 +11,7 @@ interface PortfolioHelmetProps {
 
 export function PortfolioHelmet({
   title,
-  description = "Portfolio de développeur Full‑Stack spécialisé en React, TypeScript et architectures modernes. Projets, expériences et réalisations.",
+  description = "Portfolio de développeur Full-Stack. Découvrez mes projets en React, TypeScript, NestJS, algorithmique, optimisation et architecture logicielle.",
   path,
   image,
   robots = "index, follow",

@@ -6,17 +6,20 @@ export function HomeStats() {
             <div className={styles.container}>
                 <div className={styles.statGrid}>
                     <div className={styles.stat}>
-                        <div className={styles.statNumber}>X</div>
-                        <p>Projets complétés</p>
+                        <div className={styles.statNumber}>4+</div>
+                        <p>Projets majeurs réalisés</p>
                     </div>
+
                     <div className={styles.stat}>
-                        <div className={styles.statNumber}>2</div>
-                        <p>Années d'étude et apprantissage</p>
+                        <div className={styles.statNumber}>Bac+2</div>
+                        <p>Année d'étude</p>
                     </div>
+
                     <div className={styles.stat}>
-                        <div className={styles.statNumber}>Y</div>
-                        <p>Laguages de programmation a mon répertoire</p>
+                        <div className={styles.statNumber}>8+</div>
+                        <p>Langages pratiqués</p>
                     </div>
+
                     <div className={styles.stat}>
                         <div className={styles.statNumber}>∞</div>
                         <p>Passion pour le code</p>
