@@ -4,6 +4,7 @@ import { formatDate } from '../../utils/formatters/dateFormatter';
 import { projects } from '../../data/projects';
 import styles from './ProjectDetail.module.css';
 import { PortfolioHelmet } from '../../features/helmet/UnlockItHelmet';
+import { NotFound } from '../../features/not-found/NotFound';
 
 function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -13,23 +14,7 @@ function ProjectDetail() {
 
   if (!project) {
     return (
-      <div className={styles.notFound}>
-        <PortfolioHelmet
-          title="Projet introuvable"
-          description="Le projet demandé n'existe pas ou a été supprimé."
-          path="projects/not-found"
-          image={null}
-          robots="noindex, nofollow"
-        />
-
-        <div className={styles.container}>
-          <h1>Projet non trouvé</h1>
-          <p>Le projet que vous cherchez n'existe pas ou a été supprimé.</p>
-          <Link to="/projects" className={styles.backLink}>
-            ← Retour aux projets
-          </Link>
-        </div>
-      </div>
+      <NotFound />
     );
   }
 
