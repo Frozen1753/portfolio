@@ -4,7 +4,7 @@ import { HomeProjects } from './home-projects/HomeProjects';
 import { HomeStats } from './home-stats/HomeStats';
 import { PortfolioHelmet } from '../../features/helmet/UnlockItHelmet';
 
-export function Home() {
+function Home() {
   return (
     <div className={styles.home}>
       <PortfolioHelmet
@@ -22,3 +22,5 @@ export function Home() {
     </div>
   );
 }
+
+export default Home;

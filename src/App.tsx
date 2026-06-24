@@ -1,26 +1,37 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Header } from './components/layout/header/Header';
-import { Footer } from './components/layout/footer/Footer';
-import { Home } from './pages/home/Home';
-import { Projects } from './pages/projects/Projects';
-import { ProjectDetail } from './pages/project-detail/ProjectDetail';
+import { Routes, Route, Navigate, BrowserRouter } from 'react-router-dom';
 import './styles/global.css';
-import { CvPage } from './pages/cv/CvPage';
+import { lazy, Suspense } from 'react';
+import { Loader } from './features/loader/Loader';
+import { Layout } from './components/layout/Layout';
+
+const Home = lazy(() => import("./pages/home/Home"));
+const Projects = lazy(() => import("./pages/projects/Projects"));
+const ProjectDetail = lazy(() => import("./pages/project-detail/ProjectDetail"));
+const CvPage = lazy(() => import("./pages/cv/CvPage"));
+
+function lazyRoute(element: React.ReactNode) {
+  return (
+    <Suspense fallback={<Loader />}>
+      {element}
+    </Suspense>
+  );
+}
 
 function App() {
   return (
-    <Router basename={import.meta.env.BASE_URL}>
-      <Header />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/:slug" element={<ProjectDetail />} />
-          <Route path="/cv" element={<CvPage />} />
-        </Routes>
-      </main>
-      <Footer />
-    </Router>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<Home />} />
+          {["home", "accueil"].map((path) => (
+            <Route key={path} path={path} element={<Navigate to="/" replace />} />
+          ))}
+          <Route path="projects" element={lazyRoute(<Projects />)} />
+          <Route path="projects/:slug" element={lazyRoute(<ProjectDetail />)} />
+          <Route path="cv" element={lazyRoute(<CvPage />)} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

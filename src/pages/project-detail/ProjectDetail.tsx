@@ -5,7 +5,7 @@ import { projects } from '../../data/projects';
 import styles from './ProjectDetail.module.css';
 import { PortfolioHelmet } from '../../features/helmet/UnlockItHelmet';
 
-export function ProjectDetail() {
+function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>();
   const project = projects.find((p) => p.slug === slug);
 
@@ -177,3 +177,5 @@ export function ProjectDetail() {
     </div>
   );
 }
+
+export default ProjectDetail;

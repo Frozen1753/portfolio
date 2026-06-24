@@ -1,0 +1,16 @@
+
+- [ ] Footer pb
+- [ ] Under Header pb
+- [x] Lazy + Loader
+- [X] Layout
+- [ ] Data	
+  - [ ] ACO
+  - [ ] Kuramoto
+  - [ ] Prana JDR
+- [ ] Correction description / Titles
+- [ ] Photo de profile
+- [ ] page CV
+- [ ] replace React Helmet by vite-plugin-ssg (useHead)
+- [ ] MAJ le default-og-image.png
+- [ ] MAJ le sitemap.xml
+- [ ] Favicon

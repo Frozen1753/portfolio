@@ -5,7 +5,7 @@ import { projects } from '../../data/projects';
 import styles from './Projects.module.css';
 import { PortfolioHelmet } from '../../features/helmet/UnlockItHelmet';
 
-export function Projects() {
+function Projects() {
   const [selectedTech, setSelectedTech] = useState<string | null>(null);
 
   const allTechs = Array.from(
@@ -89,3 +89,5 @@ export function Projects() {
     </div>
   );
 }
+
+export default Projects;

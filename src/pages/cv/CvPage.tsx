@@ -12,7 +12,7 @@ const TABS = [
   { id: 'portfolio', label: 'Portfolio', link: '/projects' }
 ];
 
-export function CvPage() {
+function CvPage() {
   const [activeTab, setActiveTab] = useState('about');
 
   return (
@@ -93,3 +93,5 @@ export function CvPage() {
     </section>
   );
 }
+
+export default CvPage;
