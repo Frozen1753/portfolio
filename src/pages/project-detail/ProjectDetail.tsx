@@ -37,7 +37,7 @@ export function ProjectDetail() {
 
       {/* Hero Image */}
       <section className={styles.heroImage}>
-        <img src={project.image} alt={project.title} />
+        <img src={import.meta.env.BASE_URL + project.image.replace(/^\//, "")} alt={project.title} />
         <div className={styles.gradient}></div>
       </section>
 
@@ -108,7 +108,7 @@ export function ProjectDetail() {
                 <h2>Galerie</h2>
                 <div className={styles.screenshotGrid}>
                   {project.screenshots.map((screenshot, index) => (
-                    <img key={index} src={screenshot} alt={`${project.title} - Screenshot ${index + 1}`} />
+                    <img key={index} src={import.meta.env.BASE_URL + screenshot.replace(/^\//, "")} alt={`${project.title} - Screenshot ${index + 1}`} />
                   ))}
                 </div>
               </section>

@@ -15,7 +15,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <Link to={`/projects/${project.slug}`} className={styles.link}>
       <div ref={ref} className={`${styles.card} ${isInView ? styles.visible : ''}`}>
         <div className={styles.imageWrapper}>
-          <img src={project.image} alt={project.title} className={styles.image} />
+          <img src={import.meta.env.BASE_URL + project.image.replace(/^\//, "")} alt={project.title} className={styles.image} />
           <div className={styles.overlay}>
             <span className={styles.viewButton}>Voir plus</span>
           </div>
